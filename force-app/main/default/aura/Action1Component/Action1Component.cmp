@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global"
+                controller="firstApex">
+    <aura:attribute name="recordId" type="String"/>
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.myAction}"/> -->
+    <ui:button label="Yes" press="{!c.myAction}"/>
+    <ui:button label="No" press="{!c.myAction}"/>
+</aura:component>
