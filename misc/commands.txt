@@ -1,0 +1,3 @@
+~/sfdx/bin/sfdx org open
+~/sfdx/bin/sfdx org create user
+~/sfdx/bin/sfdx org create user --set-alias admin2 --definition-file config/user-def.json
