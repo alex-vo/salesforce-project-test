@@ -1,3 +1,9 @@
+~/sfdx/bin/sfdx project create -n Project2
+~/sfdx/bin/sfdx org create scratch -a alias1 --definition-file config/project-scratch-def.json --set-default --duration-days 3
 ~/sfdx/bin/sfdx org open
 ~/sfdx/bin/sfdx org create user
 ~/sfdx/bin/sfdx org create user --set-alias admin2 --definition-file config/user-def.json
+~/sfdx/bin/sfdx lightning component create -n component2 --type lwc -d force-app/main/default/lwc/
+~/sfdx/bin/sfdx lightning component create -n component2 --type aura -d force-app/main/default/aura/
+~/sfdx/bin/sfdx source push
+~/sfdx/bin/sfdx class create -n MyClass2 -d force-app/main/default/classes/
