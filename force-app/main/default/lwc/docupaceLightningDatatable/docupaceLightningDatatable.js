@@ -1,11 +1,16 @@
 import LightningDatatable from 'lightning/datatable';
-import clientType from './clientType';
+import clientsType from './clientsType';
+import repsType from './repsType';
 
 export default class DocupaceLightningDatatable extends LightningDatatable {
   static customTypes = {
-      customTypeA: {
-          template: clientType,
+      clientsType: {
+          template: clientsType,
           typeAttributes: ['clients']
+      },
+      repsType: {
+          template: repsType,
+          typeAttributes: ['reps']
       }
   }
 }

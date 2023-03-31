@@ -1,5 +1,5 @@
 import { LightningElement, api } from 'lwc';
 
-export default class ClientType extends LightningElement {
+export default class ClientsType extends LightningElement {
    @api clients;
 }
