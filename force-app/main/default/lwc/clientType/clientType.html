@@ -1,0 +1,9 @@
+<template>
+    <template for:each={clients} for:item="client">
+        <div key={client.Key}>
+            {client.fullName}
+            <br>
+            {client.tinSsn}
+        </div>
+    </template>
+</template>

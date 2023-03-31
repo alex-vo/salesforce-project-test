@@ -49,6 +49,14 @@ export default class DocupaceWorkItemList extends LightningElement {
         {
           label: 'Clients',
           fieldName: 'clients'
+        },
+        {
+          label: 'Clients',
+          fieldName: 'customA',
+          type: 'customTypeA',
+          typeAttributes: {
+            clients: { fieldName: 'clients' },
+          }
         }
         //todo reps
     ];
@@ -71,8 +79,6 @@ export default class DocupaceWorkItemList extends LightningElement {
                   requestStatusName: workItem.requestStatusName,
                   accountNumber: workItem.account.accountNumber,
                   clients: workItem.account.clients
-                    .map((client) => `${client.fullName} Abc2`)
-                    .join('\n'),
                 };
                 return wi;
               });
