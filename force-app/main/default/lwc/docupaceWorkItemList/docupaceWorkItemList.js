@@ -10,6 +10,7 @@ export default class DocupaceWorkItemList extends LightningElement {
           label: 'Id',
           fieldName: 'workItemId',
           type: 'workItemIdType',
+          wrapText: true,
           typeAttributes: {
             workItemId: { fieldName: 'workItemId' },
           }
@@ -18,50 +19,61 @@ export default class DocupaceWorkItemList extends LightningElement {
           label: 'Clients',
           fieldName: 'clients',
           type: 'clientsType',
+          wrapText: true,
           typeAttributes: {
             clients: { fieldName: 'clients' },
           }
         },
         {
           label: 'SLA Start Time',
-          fieldName: 'slaStartTime'
+          fieldName: 'slaStartTime',
+          wrapText: true
         },
         {
           label: 'SLA Stop Time',
-          fieldName: 'slaStopTime'
+          fieldName: 'slaStopTime',
+          wrapText: true
         },
         {
           label: 'Error Description',
-          fieldName: 'errorDescription'
+          fieldName: 'errorDescription',
+          wrapText: true
         },
         {
           label: 'Created',
-          fieldName: 'createdTimestamp'
+          fieldName: 'createdTimestamp',
+          wrapText: true
         },
         {
           label: 'Assigned User',
-          fieldName: 'assignedUser'
+          fieldName: 'assignedUser',
+          wrapText: true
         },
         {
           label: 'Task Name',
-          fieldName: 'taskName'
+          fieldName: 'taskName',
+          wrapText: true
         },
         {
           label: 'Request Type Name',
-          fieldName: 'requestTypeName'
+          fieldName: 'requestTypeName',
+          wrapText: true
         },
         {
           label: 'Request Status Name',
-          fieldName: 'requestStatusName'
+          fieldName: 'requestStatusName',
+          wrapText: true
         },
         {
           label: 'Account Number',
-          fieldName: 'accountNumber'
+          fieldName: 'accountNumber',
+          wrapText: true
         },
         {
           label: 'Reps',
           fieldName: 'reps',
           type: 'repsType',
+          wrapText: true,
           typeAttributes: {
             reps: { fieldName: 'reps' },
           }
@@ -77,10 +89,10 @@ export default class DocupaceWorkItemList extends LightningElement {
                 const wi = {
                   workItemUrl: '/lightning/n/Work_Items#111',
                   workItemId: workItem.workItemId,
-                  slaStartTime: workItem.slaStartTime,
-                  slaStopTime: workItem.slaStopTime,
+                  slaStartTime: workItem.slaStartTime ? new Date(workItem.slaStartTime).toLocaleString() : workItem.slaStartTime,
+                  slaStopTime: workItem.slaStopTime ? new Date(workItem.slaStopTime).toLocaleString() : workItem.slaStopTime,
                   errorDescription: workItem.errorDescription,
-                  createdTimestamp: workItem.createdTimestamp,
+                  createdTimestamp: workItem.createdTimestamp ? new Date(workItem.createdTimestamp).toLocaleString() : workItem.createdTimestamp,
                   assignedUser: workItem.assignedUser,
                   taskName: workItem.taskName,
                   requestTypeName: workItem.requestTypeName,

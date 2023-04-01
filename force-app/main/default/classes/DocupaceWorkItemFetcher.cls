@@ -71,7 +71,7 @@ public with sharing class DocupaceWorkItemFetcher {
     static void processRequestStatus(DocupaceDTOs.WorkItemDTO workItemDTO, DocupaceDTOs.AttrValue attributeValue) {
       for(DocupaceDTOs.AttrValue attrValue: attributeValue.attrValues) {
         if (attrValue.attrId == 100001) {
-          workItemDTO.requestTypeName = attrValue.value;
+          workItemDTO.requestStatusName = attrValue.value;
         }
       }
     }
