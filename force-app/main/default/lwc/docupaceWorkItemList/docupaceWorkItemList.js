@@ -8,7 +8,19 @@ export default class DocupaceWorkItemList extends LightningElement {
     columns = [
         {
           label: 'Id',
-          fieldName: 'workItemId'
+          fieldName: 'workItemId',
+          type: 'workItemIdType',
+          typeAttributes: {
+            workItemId: { fieldName: 'workItemId' },
+          }
+        },
+        {
+          label: 'Clients',
+          fieldName: 'clients',
+          type: 'clientsType',
+          typeAttributes: {
+            clients: { fieldName: 'clients' },
+          }
         },
         {
           label: 'SLA Start Time',
@@ -47,31 +59,11 @@ export default class DocupaceWorkItemList extends LightningElement {
           fieldName: 'accountNumber'
         },
         {
-          label: 'Clients',
-          fieldName: 'clients'
-        },
-        {
-          label: 'Clients',
-          fieldName: 'clients',
-          type: 'clientsType',
-          typeAttributes: {
-            clients: { fieldName: 'clients' },
-          }
-        },
-        {
           label: 'Reps',
           fieldName: 'reps',
           type: 'repsType',
           typeAttributes: {
             reps: { fieldName: 'reps' },
-          }
-        },
-        {
-          label: 'wi',
-          fieldName: 'wi',
-          type: 'workItemIdType',
-          typeAttributes: {
-            workItemId: { fieldName: 'workItemId' },
           }
         }
     ];
@@ -83,6 +75,7 @@ export default class DocupaceWorkItemList extends LightningElement {
             this.workItemList = response.workItemList
               .map((workItem) => {
                 const wi = {
+                  workItemUrl: '/lightning/n/Work_Items#111',
                   workItemId: workItem.workItemId,
                   slaStartTime: workItem.slaStartTime,
                   slaStopTime: workItem.slaStopTime,
