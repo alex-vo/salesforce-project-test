@@ -7,5 +7,8 @@ sfdx lightning component create -n component2 --type lwc -d force-app/main/defau
 sfdx lightning component create -n component2 --type aura -d force-app/main/default/aura/
 sfdx source push
 sfdx class create -n MyClass2 -d force-app/main/default/classes/
+sfdx config set target-org=team1-sandbox
+sfdx org login web --setalias team1-sandbox --instance-url https://docupacetechnologies3--team1.sandbox.my.salesforce.com
 
 ~/sfdx/bin/sfdx
+
