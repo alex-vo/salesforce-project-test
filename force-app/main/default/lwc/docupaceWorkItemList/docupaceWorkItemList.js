@@ -65,6 +65,14 @@ export default class DocupaceWorkItemList extends LightningElement {
           typeAttributes: {
             reps: { fieldName: 'reps' },
           }
+        },
+        {
+          label: 'wi',
+          fieldName: 'wi',
+          type: 'workItemIdType',
+          typeAttributes: {
+            workItemId: { fieldName: 'workItemId' },
+          }
         }
     ];
 
